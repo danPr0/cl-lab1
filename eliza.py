@@ -105,7 +105,7 @@ class Eliza:
                 if not noun_res:
                     raise ValueError("Unknown noun '{}'".format(words[1]))
                 noun_org, noun_entry = noun_res[0]
-                adj_res = [(key, e) for key, entry_list in ADJECTIVES.items() for e in entry_list if e[0] == noun_entry[1] and e[2] == words[0]]
+                adj_res = [(key, e) for key, entry_list in ADJECTIVES.items() for e in entry_list if e[0] == noun_entry[0] and e[2] == words[0]]
                 if not adj_res:
                     raise ValueError("Unknown adjective '{}'".format(words[0]))
                 adj_org, adj_entry = adj_res[0]
